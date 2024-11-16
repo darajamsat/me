@@ -1,0 +1,213 @@
+body {
+  background-color: #9C9AA6;
+  font-family: "Nunito", serif;
+  font-size: 1.25rem;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.reenie-beanie {
+  font-family: "Reenie Beanie", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.grid {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 0;
+  padding: 5px 10px;
+  @media (min-width: 800px){
+    padding: 5px 20px;
+  }
+}
+.grid-color {
+  background-color: #E3DFD0;
+  min-height:650px;
+}
+.grid-thin {
+  max-width: 80ex;
+  margin: auto;
+}
+
+video, img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: #6a4c93;
+  font-weight: 600;
+  &hover { color: #AD6E84;}
+}
+
+a[href^="http"]::after, a[href^="https://"]::after
+{
+  font-family: "Font Awesome 6 Pro"; font-weight: 900; content: "\f08e";
+  padding-left: 5px;
+  font-size: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  background-color: #6a4c93; /* Primary color (purple tone) */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background-color: #AD6E84;
+}
+
+.btn-tertiary {
+  background-color: #AFC1BF;
+  color: #273253;
+}
+.btn:hover {
+  background-color: #593a80; /* Darker shade on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.btn:active {
+  background-color: #4b336b; /* Even darker shade when active */
+  transform: translateY(0); /* Reset lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106, 76, 147, 0.3); /* Focus ring with color matching the button */
+}
+
+.icon-icf::before {
+  font-family: "Font Awesome 6 Pro"; font-weight: 900; content: "\58 \2b ";
+  padding-right: 5px;
+  font-size: 1rem;
+}
+
+.icon-plus::before {
+  font-family: "Font Awesome 6 Pro"; font-weight: 900; content: "\2b";
+  padding-right: 5px;
+  font-size: 1rem;
+}
+
+.icon-world::before {
+  font-family: "Font Awesome 6 Pro"; font-weight: 900; content: "\f0ac";
+  padding-right: 5px;
+  font-size: 1rem;
+}
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;  /* Allows cards to wrap responsively */
+  gap: 20px;        /* Space between cards */
+  justify-content: center;
+  padding: 20px;
+}
+
+
+/* Card layout styling */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  width: calc(33.333% - 20px); /* Three cards per row on larger screens */
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Image styling */
+.card img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+/* Ensuring text and button align at the bottom */
+.card h2, .card p, .card .btn-secondary {
+  margin-top: auto;
+}
+
+/* Styling for each individual card */
+.card-flag {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(50% - 20px);  /* Two cards per row on larger screens */
+  max-width: 600px;
+  transition: transform 0.3s ease;
+}
+
+.card-flag:hover {
+  transform: translateY(-5px);  /* Hover effect */
+}
+
+/* Image styling */
+.card-flag img {
+  width: 40%;                /* Takes 40% of the card's width */
+  height: auto;
+  object-fit: cover;
+  border-right: 2px solid #ddd;
+}
+
+/* Card body styling */
+.card-flag .body {
+  padding: 15px;
+  width: 60%;                /* Takes 60% of the card's width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-flag .body h3 {
+  font-size: 1.25rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.card-flag .body p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-flag {
+    flex-direction: column;  /* Stack image and content vertically on small screens */
+    width: 100%;             /* Full width on small screens */
+  }
+  
+  .card-flag img {
+    width: 100%;             /* Full width when stacked */
+    border-right: none;      /* Remove border in stacked layout */
+    border-bottom: 2px solid #ddd;
+  }
+
+  .card-flag .body {
+    width: 100%;             /* Full width when stacked */
+  }
+}
