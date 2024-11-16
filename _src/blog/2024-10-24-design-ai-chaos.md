@@ -13,7 +13,7 @@ video {
 ExperienceCon 2024
 
 <video controls>
-  <source src="https://www.dropbox.com/scl/fi/rkcurs5tneyq4v0556bxl/chaos-ai.mp4?rlkey=ttwpx5nwvwghkx0fhemj5gpem&st=uqwugxfg&dl=0" type="video/mp4">
+  <source src="https://www.dropbox.com/scl/fi/rkcurs5tneyq4v0556bxl/chaos-ai.mp4?rlkey=ttwpx5nwvwghkx0fhemj5gpem&st=uqwugxfg&raw=1" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
